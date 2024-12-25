@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const path = require('path');
 const {connectDB}  = require('./db.js');
 const userRoutes = require('./routes/AllRoutes.js');
 const carsRoutes= require ('./routes/carRoutes.js')
@@ -7,7 +8,6 @@ const cartRoutes = require ('./routes/cartRoutes.js')
 const TestDriveRoutes = require ('./routes/testDriveRoutes.js')
 const newCarRoutes = require ('./routes/newCarRoutes.js')
 const app = express();
-const path = require('path');
 const port = 3000;
 
 
@@ -15,7 +15,7 @@ const port = 3000;
 connectDB();
 
 // Define allowed origins (you can include both localhost and public IP for production)
-const allowedOrigins = ['http://localhost:3001', 'http://15.206.194.232','http://15.206.194.232','http://15.206.194.232:3001'];
+const allowedOrigins = ['http://localhost:3001', 'http://15.206.194.232:3000','http://15.206.194.232','http://15.206.194.232:3001'];
 
 // CORS middleware with dynamic origin handling
 app.use(cors({
