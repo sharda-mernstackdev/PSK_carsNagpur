@@ -29,7 +29,7 @@ const NewcarDetails = () => {
   const fetchCarData = async () => {
     try {
       setLoading(true);
-      const response = await fetch(`http://15.206.194.232:3000/api/newCars/getCar/${id}`, {
+      const response = await fetch(`http://13.201.129.59:3000/api/newCars/getCar/${id}`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -52,7 +52,7 @@ const NewcarDetails = () => {
 
   const editListing = async (updatedData) => {
     try {
-      const response = await fetch(`http://15.206.194.232:3000/api/newCars/editCar/${id}`, {
+      const response = await fetch(`http://13.201.129.59:3000/api/newCars/editCar/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

@@ -21,7 +21,7 @@ const CarDetails = () => {
     const fetchCarDetails = async () => {
       try {
         setLoading(true);
-        const response = await fetch(`http://15.206.194.232:3000/api/cars/cars/${params?.id}`, {
+        const response = await fetch(`http://13.201.129.59:3000/api/cars/cars/${params?.id}`, {
           method: 'GET',
           headers: {
             'content-type': 'application/json'
@@ -104,7 +104,7 @@ const shareViaWhatsApp = () => {
   const handleSave = async () => {
     try {
       setLoading(true);
-      const response = await fetch(`http://15.206.194.232:3000/api/cars/update/${params?.id}`, {
+      const response = await fetch(`http://13.201.129.59:3000/api/cars/update/${params?.id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

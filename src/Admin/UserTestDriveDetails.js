@@ -23,7 +23,7 @@ export default function UserTestDrive() {
     try {
       setIsLoading(true);
       const response = await fetch(
-        "http://15.206.194.232:3000/api/testdrive/get1",
+        "http://13.201.129.59:3000/api/testdrive/get1",
         {}
       );
       if (!response.ok)
@@ -48,7 +48,7 @@ export default function UserTestDrive() {
     }
 
     const carIdString = typeof carId === "object" ? carId.$oid : carId;
-    const url = `http://15.206.194.232:3000/api/cars/cars/${carIdString}`;
+    const url = `http://13.201.129.59:3000/api/cars/cars/${carIdString}`;
     console.log("Fetching car data from:", url);
 
     try {

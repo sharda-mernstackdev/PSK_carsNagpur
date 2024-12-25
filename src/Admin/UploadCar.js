@@ -77,7 +77,7 @@ const UploadCar = () => {
         formDataToSend.append('images', image.file);
       });
   
-      const response = await fetch('http://15.206.194.232:3000/api/cars/newCar1', {
+      const response = await fetch('http://13.201.129.59:3000/api/cars/newCar1', {
         method: 'POST',
         body: formDataToSend,
       });

@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 const fetchCarsData = async () => {
   try {
     const response = await fetch(
-      'http://15.206.194.232:3000/api/cars/cars',
+      'http://13.201.129.59:3000/api/cars/cars',
       {
         method: 'GET',
         headers: {
@@ -101,7 +101,7 @@ function Cars() {
     }
     
     try {
-      const response = await fetch(`http://15.206.194.232:3000/api/cars/delete/${carId}`, {
+      const response = await fetch(`http://13.201.129.59:3000/api/cars/delete/${carId}`, {
         method: 'DELETE',
       });
 

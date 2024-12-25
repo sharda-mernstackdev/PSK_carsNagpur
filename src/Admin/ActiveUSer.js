@@ -55,7 +55,7 @@ function ActiveUserContent() {
   useEffect(() => {
     const fetchActiveUsers = async () => {
       try {
-        const response = await fetch("http://15.206.194.232:3000/api/users/active");
+        const response = await fetch("http://13.201.129.59:3000/api/users/active");
         if (!response.ok) throw new Error("Failed to fetch users");
 
         const data = await response.json();
