@@ -125,7 +125,7 @@ const Navbar = () => {
 
   const fetchUserDetails = async () => {
     try {
-      const response = await fetch('http://localhost:3000/api/users/user-detail', {
+      const response = await fetch('http://15.206.194.232:3000/api/users/user-detail', {
         method: 'GET',
         headers: {
           'Authorization':` Bearer ${localStorage.getItem('token')}`,
@@ -153,7 +153,7 @@ const Navbar = () => {
 
   const fetchCartData = async () => {
     try {
-      const response = await fetch('http://localhost:3000/api/cart', {
+      const response = await fetch('http://15.206.194.232:3000/api/cart', {
         method: 'GET',
         credentials: 'include',
         headers: {
@@ -206,7 +206,7 @@ const Navbar = () => {
   
     setIsLoggingOut(true);
     try {
-      const response = await fetch(`http://localhost:3000/api/users/userLogout/${user._id}`, {
+      const response = await fetch(`http://15.206.194.232:3000/api/users/userLogout/${user._id}`, {
         method: 'GET',
         credentials: 'include',
       });

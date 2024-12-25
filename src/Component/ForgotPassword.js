@@ -21,7 +21,7 @@ export function ForgotPassword() {
     setError("");
 
     try {
-      const response = await fetch("http://localhost:3000/api/users/forgot-pass", {
+      const response = await fetch("http://15.206.194.232:3000/api/users/forgot-pass", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

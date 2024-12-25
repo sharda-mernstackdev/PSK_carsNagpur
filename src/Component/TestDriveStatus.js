@@ -14,7 +14,7 @@ export default function TestDriveStatus() {
   const fetchCarsData = async () => {
     try {
       setIsLoading(true)
-      const response = await fetch('http://localhost:3000/api/testdrive/get',{
+      const response = await fetch('http://15.206.194.232:3000/api/testdrive/get',{
         headers : {
           'Authorization': `Bearer ${localStorage.getItem('token')}`,
           "content-type" : 'application/json'
@@ -41,7 +41,7 @@ export default function TestDriveStatus() {
     }
   
     const carIdString = typeof carId === 'object' ? carId.$oid : carId;
-    const url = `http://localhost:3000/api/cars/cars/${carIdString}`;
+    const url = `http://15.206.194.232:3000/api/cars/cars/${carIdString}`;
     console.log('Fetching car data from:', url);
   
     try {

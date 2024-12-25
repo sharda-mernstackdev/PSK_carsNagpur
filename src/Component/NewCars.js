@@ -364,7 +364,7 @@ export function NewCars() {
         throw new Error('Authentication token not found');
       }
 
-      const response = await fetch('http://localhost:3000/api/newCars/create', {
+      const response = await fetch('http://15.206.194.232:3000/api/newCars/create', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,

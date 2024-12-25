@@ -7,26 +7,33 @@ const cartRoutes = require ('./routes/cartRoutes.js')
 const TestDriveRoutes = require ('./routes/testDriveRoutes.js')
 const newCarRoutes = require ('./routes/newCarRoutes.js')
 const app = express();
+const path = require('path');
 const port = 3000;
 
 
+// Connect to the database
 connectDB();
 
+// Define allowed origins (you can include both localhost and public IP for production)
+const allowedOrigins = ['http://localhost:3001', 'http://15.206.194.232','http://15.206.194.232','http://15.206.194.232:3001'];
+
+// CORS middleware with dynamic origin handling
 app.use(cors({
   origin: (origin, callback) => {
-    const allowedOrigins = ['http://localhost:3001'];
     if (allowedOrigins.includes(origin) || !origin) {
       callback(null, true); // Allow the request
     } else {
-      callback(new Error('Not allowed by CORS')); // Block the request
+      callback(new Error('Not allowed by CORS')); // Reject the request
     }
   },
-  methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
-  credentials: true
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'], // Allow these HTTP methods
+  credentials: true // Allow cookies and credentials
 }));
+
 // Middleware to parse JSON
 app.use(express.json());
 
+app.use(express.static(path.join(__dirname, "../build")));
 
 //deploy
 // Use routes
@@ -35,6 +42,12 @@ app.use("/api/cars", carsRoutes );
 app.use('/api/cart', cartRoutes);
 app.use('/api/testDrive', TestDriveRoutes)
 app.use('/api/newCars', newCarRoutes )
+
+	app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../build", "index.html"));
+});
+
+
 // Start the server
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
