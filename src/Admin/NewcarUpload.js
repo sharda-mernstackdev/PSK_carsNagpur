@@ -26,7 +26,7 @@ export default function NewCarUpload() {
   // Fetch car data from the backend
   const fetchCarsData = async () => {
     try {
-      const response = await fetch('http://13.201.129.59:3000/api/newCars/getCar', {
+      const response = await fetch('http://13.126.75.239:3000/api/newCars/getCar', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',

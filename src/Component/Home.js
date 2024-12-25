@@ -2,6 +2,11 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronLeft, ChevronRight, Search, Shield, ThumbsUp, Truck } from 'lucide-react';
 import { motion } from 'framer-motion';
+import sale1 from '../Img/sale1.jpg';
+import sale2 from '../Img/sale2.jpg';
+import sale3 from '../Img/sale3.jpg';
+
+
 
 const Home = () => {
   const [currentHeroSlide, setCurrentHeroSlide] = useState(0);
@@ -120,9 +125,9 @@ const Home = () => {
   ];
 
   const advertisements = [
-    { id: 1, title: '', description: '', image: '/Img/sale1.jpg' },
-    { id: 2, title: '', description: '', image: '/Img/sale2.jpg' },
-    { id: 3, title: '', description: '', image: '/Img/sale3.jpg' }
+    { id: 1, title: '', description: '', image: sale1 },
+    { id: 2, title: '', description: '', image: sale2 },
+    { id: 3, title: '', description: '', image: sale3 }
   ];
 
   useEffect(() => {

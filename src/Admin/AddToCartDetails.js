@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 
 const fetchCartData = async () => {
   try {
-    const response = await fetch('http://13.201.129.59:3000/api/cart/cart', {
+    const response = await fetch('http://13.126.75.239:3000/api/cart/cart', {
       method: 'GET',
       headers: {
         "content-type": 'application/json'

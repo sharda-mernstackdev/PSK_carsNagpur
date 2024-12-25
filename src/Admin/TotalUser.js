@@ -28,7 +28,7 @@ function TotalUser() {
     const fetchUsers = async () => {
       try {
         const response = await fetch(
-          "http://13.201.129.59:3000/api/users/getAllUser",
+          "http://13.126.75.239:3000/api/users/getAllUser",
           {
             method: "GET",
             headers: {
