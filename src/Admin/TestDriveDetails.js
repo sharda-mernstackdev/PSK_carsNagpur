@@ -30,7 +30,7 @@ const TestDriveDetails = () => {
           throw new Error("No authentication token found");
         }
 
-        const response = await fetch(`http://13.126.75.239:3000/api/testDrive/get1/${id}`, {
+        const response = await fetch(`http://15.207.18.250:3000/api/testDrive/get1/${id}`, {
           method: "GET",
         //   headers: {
         //     "Content-Type": "application/json",
@@ -69,7 +69,7 @@ const TestDriveDetails = () => {
       }
 
       const carIdString = typeof carId === "object" ? carId.$oid : carId;
-      const url = `http://13.126.75.239:3000/api/cars/cars/${carIdString}`;
+      const url = `http://15.207.18.250:3000/api/cars/cars/${carIdString}`;
       console.log("Fetching car data from:", url);
 
       try {
@@ -170,7 +170,7 @@ const TestDriveDetails = () => {
 
   const handleCancel = async () => {
     try {
-      const response = await fetch(`http://13.126.75.239:3000/api/testDrive/${id}/cancel1`, {
+      const response = await fetch(`http://15.207.18.250:3000/api/testDrive/${id}/cancel1`, {
         method: 'PATCH',
         // headers: {
         //   Authorization: `Bearer ${localStorage.getItem('token')}`,
@@ -195,7 +195,7 @@ const TestDriveDetails = () => {
 
   const confirmDelete =async () => {
     try {
-      const response = await fetch(`http://13.126.75.239:3000/api/testDrive/delete1/${id}`, {
+      const response = await fetch(`http://15.207.18.250:3000/api/testDrive/delete1/${id}`, {
         method: 'DELETE',
         // headers: {
         //   Authorization: `Bearer ${localStorage.getItem('token')}`,

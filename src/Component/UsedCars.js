@@ -143,7 +143,7 @@ const fetchCarsData = async (budget, selectedFilters) => {
   try {
     const filterQuery = selectedFilters.map(f => `${f.brand}:${f.carName}`).join(',');
     const response = await fetch(
-      `http://13.126.75.239:3000/api/cars/cars?budgetMin=${budget[0]}&budgetMax=${budget[1]}&filters=${filterQuery}`,
+      `http://15.207.18.250:3000/api/cars/cars?budgetMin=${budget[0]}&budgetMax=${budget[1]}&filters=${filterQuery}`,
       {
         method: 'GET',
         headers: {
@@ -247,7 +247,7 @@ function UsedCars() {
         return;
       }
 
-      const response = await fetch('http://13.126.75.239:3000/api/cart/add', {
+      const response = await fetch('http://15.207.18.250:3000/api/cart/add', {
         method: 'POST',
         credentials: 'include',
         headers: {
@@ -318,7 +318,7 @@ function UsedCars() {
 
   const handleRemoveFromCart = async (carId) => {
     try {
-      const response = await fetch(`http://13.126.75.239:3000/api/cart/remove/${carId}`, {
+      const response = await fetch(`http://15.207.18.250:3000/api/cart/remove/${carId}`, {
         method: 'DELETE',
         credentials: 'include',
         headers: {
@@ -390,7 +390,7 @@ function UsedCars() {
       setIsLoading(true);
 
       try {
-        const response = await fetch("http://13.126.75.239:3000/api/users/login", {
+        const response = await fetch("http://15.207.18.250:3000/api/users/login", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

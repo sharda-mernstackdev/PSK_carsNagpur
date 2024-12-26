@@ -8,7 +8,7 @@ const UserDetails = () => {
   const fetchUserDetails = async () => {
     setIsLoading(true);
     try {
-      const response = await fetch('http://13.126.75.239:3000/api/users/user-detail', {
+      const response = await fetch('http://15.207.18.250:3000/api/users/user-detail', {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`,
